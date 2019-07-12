@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossentry.dtd" []>
+<glossentry id="awsAmi">
+  <glossterm>Ryffine Amazon Machine Image <varname>060 Xref</varname> in Ohio</glossterm>
+  <glossBody>
+    <glossAlt>
+      <glossAcronym>awsAmi</glossAcronym>
+    </glossAlt>
+  </glossBody>
+</glossentry>
