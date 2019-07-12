@@ -1,1 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossentry.dtd" []>
+<glossentry id="xref">
+  <glossterm>Xref - the cross referencer</glossterm>
+  <glossBody>
+    <glossAlt>
+      <glossAcronym>Xref</glossAcronym>
+    </glossAlt>
+  </glossBody>
+</glossentry>
