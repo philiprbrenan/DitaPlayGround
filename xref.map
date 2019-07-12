@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd" []>
+<map>
+  <title/>
+  <glossref print="yes" keys="aws"     href="glossary/aws.xml"/>
+  <glossref print="yes" keys="awsAmi"  href="glossary/awsAmi.xml"/>
+  <glossref print="yes" keys="xref"    href="glossary/xref.xml"/>
+  <topicref href="xref.xml"/>
+</map>
+
