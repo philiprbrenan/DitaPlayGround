@@ -1,1 +1,108 @@
 <concept id="GUID-60d6fed1-34e2-22e1-853a-5d2d3aa3001f">
+  <title id="title">Tags to Text</title>
+  <conbody>
+    <p>A 
+      <term>Dita</term>
+ topic consists of 
+      <term>tags</term>
+ and 
+      <term>text</term>
+    </p>.
+
+
+    <p>To count tags we count the actual number of tags in the document.  So, if
+the document contains three paragraphs bracketted with 
+      <term>p</term>
+ tags, then we add
+three to the total numbers of tags not just one.  Let us do this for a specific
+document and record the number as 
+      <term>tags</term>.
+
+    </p>
+    <p>For text, we count each span of text uninterrupted by a new 
+      <term>tag</term>. 
+Doing this might
+produce a number 
+      <term>texts</term>.
+
+    </p>
+    <p>To obtain the 
+      <term>tagsToTextRatio</term>
+ for a document we divide the number of tags
+      <term>tags</term>
+ by the number of 
+      <term>texts</term>.   
+If the document is empty or contains no 
+      <term>text</term>
+
+elements we say that the ratio is 
+      <cite>unknown</cite>.
+
+    </p>
+    <p>The ratio is chosen to exhibit larger numbers for documents that have more
+tags in them relative to the same text.  Of course, owing this it is easy to
+abuse this ratio by adding lots of empty 
+      <term>tags</term>
+ or infinite chains of 
+      <term>b</term>
+
+tags nested in side each other.   However, such transgressions are easy to
+detect in an automated manner and so can be discounted.
+    </p>
+    <p>Typical 
+      <term>HTML</term>
+ Documents have a 
+      <term>tagsToTextRatio</term>
+ of about 
+      <term>1.3</term>.
+
+    </p>
+    <p>
+      <term>Dita</term>
+ documents written by a beginner have a 
+      <term>tagsToTextRatio</term>
+ of about
+      <term>1.5</term>.
+
+    </p>
+    <p>More advanced users of 
+      <term>Dita</term>
+ tend to exhibit a higher 
+      <term>tagsToTextRatio</term>
+
+in their work, usually exceeding 
+      <term>2.0</term>
+ but often going much higher.  Imagine
+for example a well laid out 
+      <term>task</term>
+      <term>topic</term>
+ with 
+      <term>steps</term>
+ and 
+      <term>substeps</term>,
+
+each containing several 
+      <term>step</term>
+s, each 
+      <term>step</term>
+ containing a 
+      <term>cmd</term>
+ etc.
+Advanced users tend to be able to supply more vertical descriptions of their
+subject matter, they are characterized by being on top of their subject and
+thus can express it useing less text and nore tags, leading to a higher
+      <term>tagsToText</term>
+ ratio.
+    </p>
+    <p>
+      <term>Xref</term>
+ reports the 
+      <term>tagsToText</term>
+ ratio in the 
+      <filepath>counts/</filepath>
+
+as 
+      <filepath>tags_to_text_ratio.txt</filepath>
+    </p>
+  </conbody>
+</concept>
