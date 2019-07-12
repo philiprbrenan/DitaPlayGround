@@ -1,0 +1,57 @@
+<bookmap id="GUID-debd7338-ff16-0c37-3042-d0edc9649eb4">
+  <booktitle>
+    <mainbooktitle>Entropy in Systems Documented with Dita</mainbooktitle>
+  </booktitle>
+  <bookmeta>
+    <shortdesc/>
+    <author>Philip R. Brenan</author>
+    <source/>
+    <category/>
+    <keywords>
+      <keyword/>
+    </keywords>
+    <prodinfo>
+      <prodname product=""/>
+      <vrmlist>
+        <vrm version=""/>
+      </vrmlist>
+      <prognum/>
+      <brand/>
+    </prodinfo>
+    <bookchangehistory>
+      <approved>
+        <revisionid/>
+      </approved>
+    </bookchangehistory>
+    <bookrights>
+      <copyrfirst>
+        <year/>
+      </copyrfirst>
+      <bookowner/>
+    </bookrights>
+  </bookmeta>
+  <frontmatter>
+    <notices/>
+    <booklists>
+      <toc/>
+    </booklists>
+    <preface/>
+  </frontmatter>
+  <chapter topicref="../concepts/ttt.dita"/>
+  <chapter topicref="../concepts/rtr.dita"/>
+  <appendices/>
+  <reltable>
+    <relheader>
+      <relcolspec/>
+      <relcolspec/>
+    </relheader>
+    <relrow>
+      <relcell/>
+      <relcell/>
+    </relrow>
+    <relrow>
+      <relcell/>
+      <relcell/>
+    </relrow>
+  </reltable>
+</bookmap>
