@@ -1,0 +1,224 @@
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd" []>
+<task id="overview">
+  <title>Self Service Xref</title>
+  <taskbody>
+    <context>
+      <p id="p1">
+        If you are willing to place your source <xref
+        conref="conrefs/xrefs.xml#xrefs/dita"/>documents and Images in a
+        repository on <xref conref="conrefs/xrefs.xml#xrefs/github"/> and start
+        an <abbreviated-form keyref="aws"/> spot instance, you can run
+        <abbreviated-form keyref="xref"/> yourself via a self service web site
+        embedded in the Spot Instance.
+      </p>
+    </context>
+
+    <steps>
+      <step>
+        <cmd>
+          Place some <xref conref="conrefs/xrefs.xml#xrefs/dita"/>into a
+          repository on <xref conref="conrefs/xrefs.xml#xrefs/github"/>.
+          Remember the <filepath>user/repo</filepath> as name
+          <varname>$G</varname> for future reference.
+        </cmd>
+
+        <stepxmp>In this example we have remembered
+        <codeph><varname>$G</varname> ==
+        "philiprbrenan/DitaToGBDita"</codeph></stepxmp>
+
+        <info>
+          <fig>
+            <image href="images/4/01__Dita_in__GitHub.png" />
+          </fig>
+          <p>
+            Create a public repository on <xref
+            conref="conrefs/xrefs.xml#xrefs/github"/> and load your <xref
+            conref="conrefs/xrefs.xml#xrefs/dita"/>topics and images into it.
+            You may use any folder structure and file names that are convenient
+            to your project.
+          </p>
+        </info>
+      </step>
+
+      <step>
+        <cmd>Start a spot instance on <abbreviated-form keyref="aws"/></cmd>
+        <info>
+          <fig>
+            <image href="images/4/02__Spot_Instance_on_AWS.png"/>
+          </fig>
+          <p>Start a spot instance on <abbreviated-form keyref="aws"/> using
+          <abbreviated-form keyref="awsAmi"/> version of
+          <abbreviated-form keyref="xref"/>.</p>
+        </info>
+        <substeps>
+          <substep>
+            <cmd>
+              Take the square root of the number of topics in your <xref
+              conref="conrefs/xrefs.xml#xrefs/github"/> repository and remember
+              this number as <varname>$N</varname>
+            </cmd>
+          </substep>
+          <substep>
+            <cmd>
+              Start a spot instance that has approximately the recalled number
+              <varname>$N</varname> of CPUs.
+            </cmd>
+          </substep>
+          <substep>
+            <cmd>Edit the inbound and outbound rules to allow traffic on port 80.</cmd>
+            <info>
+              <p>
+                You will be controlling <abbreviated-form keyref="xref"/> via a
+                web browser which operates over port 80 - hence the need to
+                open this port which is closed by default.
+              </p>
+            </info>
+          </substep>
+          <substep>
+            <cmd>
+              Make a note of the IP address of your spot instance, remember it
+              as: <varname>$IP</varname>.
+            </cmd>
+          </substep>
+        </substeps>
+      </step>
+
+      <step>
+        <note>You will have to wait until the spot instance has finished
+        initializing before you can perform this step.</note> <cmd>
+          Browse to the IP Address of the Spot Instance recorded in
+          <varname>$IP</varname>
+        </cmd>
+        <info>
+          <fig>
+            <image href="images/4/03__Browse_to_IP_Address_of_Spot_Instance.png" />
+          </fig>
+        </info>
+        <substeps>
+          <substep>
+            <cmd>Click on the only link on the initial page to reach the page
+            used to control <abbreviated-form keyref="xref"/>.</cmd>
+          </substep>
+        </substeps>
+      </step>
+
+      <step>
+        <note>
+          You are now ready to apply <abbreviated-form keyref="xref"/> to your
+          <xref conref="conrefs/xrefs.xml#xrefs/github"/> repository remembered
+          as <varname>$G</varname>.
+        </note>
+        <cmd>
+          Enter the recalled name <varname>$G</varname> of your <xref
+          conref="conrefs/xrefs.xml#xrefs/github"/> repository into the only
+          input field on the page and press <uicontrol>Submit</uicontrol>
+        </cmd>
+        <info>
+          <fig>
+            <image href="images/4/04__Start_Xref.png" />
+          </fig>
+        </info>
+      </step>
+
+      <step>
+        <cmd>
+          Optionally press <uicontrol>Refresh</uicontrol> periodically to
+          update the display
+        </cmd>
+        <info>
+          <fig>
+            <image href="images/4/05__Run_Xref.png" />
+          </fig>
+        </info>
+        <info>
+          Pressing <uicontrol>Refresh</uicontrol> will update the
+          <uicontrol>Conversion Running</uicontrol> area to show you the number
+          of processes being used by <abbreviated-form keyref="xref"/>.
+          <abbreviated-form keyref="xref"/> runs in parallel were ever possible
+          to reduce processing time. The more CPUs available, the more
+          processes <abbreviated-form keyref="xref"/> will create.
+        </info>
+        <info>
+          Pressing <uicontrol>Refresh</uicontrol>will also update the
+          <uicontrol>Conversion Log</uicontrol> area to show you the last few
+          lines of output from <abbreviated-form keyref="xref"/>.  This
+          information is useful as it gives an idea of how much progress has
+          been made.
+        </info>
+        <info>
+          Eventually, depending on the size of your project and the number of
+          CPUs you chose, processing will complete and you will see the
+          <uicontrol>Download Results</uicontrol> area after pressing
+          <uicontrol>Refresh</uicontrol>.
+        </info>
+      </step>
+
+      <step>
+        <note>Once processing has completed you can download the results of the
+        <abbreviated-form keyref="xref"/> run as a zip file.</note>
+        <cmd>
+          Click on <uicontrol>Download Results</uicontrol>
+        </cmd>
+        <info>
+          <fig>
+            <image href="images/4/06__Download_Results.png" />
+          </fig>
+        </info>
+      </step>
+
+      <step>
+        <note>
+          The corpus published as PDF is visible in the
+          <filepath>publications/</filepath> Once processing has completed you
+          will be offered a chance to download the results of the
+          <abbreviated-form keyref="xref"/> run as a zip file.
+        </note>
+
+        <cmd>Open the downloaded zip file and click on the
+          <uicontrol>publications</uicontrol>
+          folder to choose a bookmap to view.
+        </cmd>
+        <info>
+          <fig>
+            <image href="images/4/07__Unzip_Results.png" />
+          </fig>
+        </info>
+        <info>
+          The zip file that you download will containing the following folders:
+          <dl>
+            <dlentry>
+              <dt>
+                <filepath>out</filepath>
+              </dt> <dd>The input files renamed and formatted to the <xref
+              scope="external"
+              href="https://metacpan.org/pod/Dita::GB::Standard">GB
+              Standard</xref></dd>
+            </dlentry>
+            <dlentry>
+              <dt>
+                <filepath>publications</filepath>
+              </dt>
+              <dd>The corpus published as PDF</dd>
+            </dlentry>
+            <dlentry>
+              <dt>
+                <filepath>reports</filepath>
+              </dt>
+              <dd>Interesting reports which describe the state of the corpus</dd>
+            </dlentry>
+          </dl>
+        </info>
+      </step>
+
+      <step>
+        <cmd>
+          Click on  a publication to view the generated PDF</cmd>
+        <info>
+          <fig>
+            <image href="images/4/08__View_Generated_Pdf.png" />
+          </fig>
+        </info>
+      </step>
+    </steps>
+  </taskbody>
+</task>
