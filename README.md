@@ -1,2 +1,0 @@
-# DitaPlayGround
-Dita Playground
