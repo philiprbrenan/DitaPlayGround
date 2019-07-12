@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd" []>
+<concept id="xrefs">
+  <title/>
+  <conbody>
+    <p>
+
+    <xref id="ascii"          href="https://en.wikipedia.org/wiki/ASCII"                                                                                   scope="external">Ascii                         </xref>
+    <xref id="boson"          href="https://en.wikipedia.org/wiki/Boson"                                                                                   scope="external">boson                         </xref>
+    <xref id="commandline"    href="https://en.wikipedia.org/wiki/Command-line_interface"                                                                  scope="external">command line                  </xref>
+    <xref id="confess"        href="http://perldoc.perl.org/Carp.html#SYNOPSIS/"                                                                           scope="external">confess                       </xref>
+    <xref id="die"            href="http://perldoc.perl.org/functions/die.html"                                                                            scope="external">die                           </xref>
+    <xref id="dita"           href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html"                  scope="external">Dita                          </xref>
+    <xref id="ditaot"         href="http://www.dita-ot.org/download"                                                                                       scope="external">DITA-OT                       </xref>
+    <xref id="eval"           href="http://perldoc.perl.org/functions/eval.html"                                                                           scope="external">eval                          </xref>
+    <xref id="extensions"     href="https://en.wikipedia.org/wiki/List_of_filename_extensions"                                                             scope="external">file name extensions          </xref>
+    <xref id="find"           href="https://en.wikipedia.org/wiki/Find_(Unix)"                                                                             scope="external">find                          </xref>
+    <xref id="gbstandard"     href="http://metacpan.org/pod/Dita::GB::Standard"                                                                            scope="external">GB Standard                   </xref>
+    <xref id="github"         href="https://github.com"                                                                                                    scope="external">GitHub                        </xref>
+    <xref id="gnufdl"         href="https://en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License"                                    scope="external">GNU Free Documentation License</xref>
+    <xref id="grep"           href="https://en.wikipedia.org/wiki/Grep"                                                                                    scope="external">grep                          </xref>
+    <xref id="gui"            href="https://en.wikipedia.org/wiki/Graphical_user_interface"                                                                scope="external">graphical user interface      </xref>
+    <xref id="guid"           href="https://en.wikipedia.org/wiki/Universally_unique_identifier"                                                           scope="external">guid                          </xref>
+    <xref id="htmltable"      href="https://www.w3.org/TR/html52/tabular-data.html#the-table-element"                                                      scope="external">html table                    </xref>
+    <xref id="imagemagick"    href="https://www.imagemagick.org/script/index.php"                                                                          scope="external">Imagemagick                   </xref>
+    <xref id="laser"          href="https://en.wikipedia.org/wiki/Laser"                                                                                   scope="external">laser                         </xref>
+    <xref id="lvaluemethod"   href="http://perldoc.perl.org/perlsub.html#Lvalue-subroutines"                                                               scope="external">lvalue                        </xref>
+    <xref id="md5"            href="https://en.wikipedia.org/wiki/MD5"                                                                                     scope="external">md5 sum                       </xref>
+    <xref id="our"            href="https://perldoc.perl.org/functions/our.html"                                                                           scope="external">our                           </xref>
+    <xref id="oxygenformat"   href="https://www.oxygenxml.com/doc/versions/20.1/ug-author/topics/linked-output-messages-of-external-engine.html"           scope="external">Oxygen Format                 </xref>
+    <xref id="perl"           href="http://www.perl.org/"                                                                                                  scope="external">Perl                          </xref>
+    <xref id="perlal"         href="https://dev.perl.org/licenses/artistic.html"                                                                           scope="external">Perl Artistic Licence         </xref>
+    <xref id="shell"          href="https://en.wikipedia.org/wiki/Shell_(computing)"                                                                       scope="external">shell                         </xref>
+    <xref id="tab"            href="https://en.wikipedia.org/wiki/Tab_key"                                                                                 scope="external">tab                           </xref>
+    <xref id="xmlparser"      href="https://metacpan.org/pod/XML::Parser/"                                                                                 scope="external">Xml parser                    </xref>
+    <xref id="unicode"        href="https://en.wikipedia.org/wiki/Unicode"                                                                                 scope="external">Unicode                       </xref>
+    <xref id="utf8"           href="https://en.wikipedia.org/wiki/UTF-8"                                                                                   scope="external">utf8                          </xref>
+    <xref id="zerowidthspace" href="https://en.wikipedia.org/wiki/Zero-width_space"                                                                        scope="external">zero width space              </xref>
+    </p>
+  </conbody>
+</concept>
+
+
