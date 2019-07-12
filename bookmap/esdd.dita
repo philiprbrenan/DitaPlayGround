@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd" []>
+<bookmap id="GUID-4906757e-30bb-d762-1781-33cc2f37d040">
+  <booktitle>
+    <mainbooktitle>Entropy in Systems Documented with Dita</mainbooktitle>
+  </booktitle>
+  <bookmeta>
+    <shortdesc/>
+    <author>Philip R. Brenan</author>
+    <source/>
+    <metadata>
+      <othermeta content="AAAA" name="aa"/>
+      <othermeta content="BBBBbbbb" name="bb"/>
+    </metadata>
+    <category/>
+    <keywords>
+      <keyword/>
+    </keywords>
+    <prodinfo>
+      <prodname product=""/>
+      <vrmlist>
+        <vrm version=""/>
+      </vrmlist>
+      <prognum/>
+      <brand/>
+    </prodinfo>
+    <bookchangehistory>
+      <approved>
+        <revisionid/>
+      </approved>
+    </bookchangehistory>
+    <bookrights>
+      <copyrfirst>
+        <year/>
+      </copyrfirst>
+      <bookowner/>
+    </bookrights>
+  </bookmeta>
+  <frontmatter>
+    <notices/>
+    <booklists>
+      <toc/>
+    </booklists>
+    <preface/>
+  </frontmatter>
+  <chapter href="../concept/ttt.dita"/>
+  <chapter href="../concept/rtr.dita"/>
+  <appendices/>
+  <reltable>
+    <relheader>
+      <relcolspec/>
+      <relcolspec/>
+    </relheader>
+    <relrow>
+      <relcell/>
+      <relcell/>
+    </relrow>
+    <relrow>
+      <relcell/>
+      <relcell/>
+    </relrow>
+  </reltable>
+</bookmap>
+<!--linted: 2019-07-12 at 20:53:32 -->
+<!--catalog: /home/phil/r/dita/dita-ot-3.1/catalog-dita.xml -->
+<!--ditaType: bookmap -->
+<!--docType: <!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd" []> -->
+<!--file: /home/phil/r/www/playground/dita/bookmap/esdd.dita -->
+<!--header: <?xml version="1.0" encoding="UTF-8"?> -->
+<!--lineNumber: main createPlayGround.pl 31 -->
