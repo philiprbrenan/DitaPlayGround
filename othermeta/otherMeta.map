@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd" []>
+<map>
+  <title>Normalizing othermeta in the Sales Force Document Corpus</title>
+  <topicref href="otherMeta.xml"/>
+  <glossref print="yes" keys="awsAmi"    href="glossary/awsAmi.xml"/>
+  <glossref print="yes" keys="aws"       href="glossary/aws.xml"/>
+  <glossref print="yes" keys="othermeta" href="glossary/otherMeta.xml"/>
+  <glossref print="yes" keys="xref"      href="glossary/xref.xml"/>
+  <glossref print="yes" keys="zip"       href="glossary/zip.xml"/>
+</map>
+

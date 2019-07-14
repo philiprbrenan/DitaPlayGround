@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd" []>
+<concept id="c1">
+  <title>Normalizing Othermeta in the Sales Force Document Corpus</title>
+  <prolog>
+  <author type="creator">Philip R. Brenan</author>
+  <author type="contributor">William D. Gearhart</author>
+</prolog>
+  <conbody>
+
+    <p>The SalesForce input document corpus consists of 44K <xref scope="external" format="html" href="http://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/dita-v1.3-os-part2-tech-content.html">Dita</xref> topics and bookmaps.</p>
+
+    <p>We would like to migrate the <abbreviated-form keyref="othermeta"/>
+    data, currently replicated in each topic, into the calling bookmaps in the
+    expectation that this will eliminate a lot of boiler plate code.</p>
+
+    <p>We assume that <abbreviated-form keyref="othermeta"/> will <b>only</b>
+    be applied in the metadata section of bookmaps.</p>
+
+    <p><abbreviated-form keyref="xref"/> has been upgraded to track and report
+    <abbreviated-form keyref="othermeta"/> in its input corpus.</p>
+
+    <p>The results of applying <abbreviated-form keyref="xref"/> to the full input corpus are visible at:
+    <filepath>s3://salesforce.dita/results2/</filepath> </p>
+
+    <p>To check that
+    the processing performed by <abbreviated-form keyref="xref"/> is correct, 4
+    documents have been produced that demonstrate the various <abbreviated-form
+    keyref="othermeta"/> possibilities and the resulting <abbreviated-form
+    keyref="xref"/> reports. The input documents can be seen in
+    <filepath>doc/</filepath>, the corresponding reports are in the
+    <filepath>reports/other_meta/</filepath> folder of the accompanying
+    <abbreviated-form keyref="zip"/> file.</p>
+
+    <p>In the test cases we have 5 <abbreviated-form keyref="othermeta"/> names:
+      <dl>
+        <dlentry><dt>aa</dt><dd>AAAA</dd></dlentry>
+        <dlentry><dt>bb</dt><dd>BBBB</dd></dlentry>
+        <dlentry><dt>cc</dt><dd>CCCC</dd></dlentry>
+        <dlentry><dt>dd</dt><dd>DD11</dd><dd>DD22</dd></dlentry>
+        <dlentry><dt>ee</dt><dd>EEEE</dd><dd>EEee</dd></dlentry>
+      </dl>
+
+      </p>
+
+    <p><abbreviated-form keyref="xref"/> produces the following reports when
+    applied to an input corpus:</p>
+
+    <dl>
+      <dlentry>
+
+        <dt>duplicates_separately</dt> <dd>Duplicated <abbreviated-form
+        keyref="othermeta"/> names in bookmaps and topics considered
+        separately. This report is not present as in this scenario as there are
+        no duplicated <abbreviated-form keyref="othermeta"/> in either the book
+        maps or the topics as can be seen by inspecting the topic files. </dd>
+
+      </dlentry>
+
+      <dlentry>
+        <dt>duplicates</dt> <dd>Duplicated <abbreviated-form
+        keyref="othermeta"/> names in bookmaps with the <abbreviated-form
+        keyref="othermeta"/> from their called topics included</dd>
+      </dlentry>
+
+      <dlentry>
+        <dt>must_remain_in_topic</dt> <dd><abbreviated-form
+        keyref="othermeta"/> that must currently stay in the called topic
+        because pushing it into the calling bookmap would cause
+        <abbreviated-form keyref="othermeta"/> name duplication</dd>
+      </dlentry>
+
+      <dlentry>
+        <dt>push_to_book_maps</dt> <dd><abbreviated-form keyref="othermeta"/>
+        that can currently be safely pushed to the calling book map without
+        causing <abbreviated-form keyref="othermeta"/> name duplication</dd>
+      </dlentry>
+
+      <dlentry>
+        <dt>book_maps_before_topics_included</dt> <dd>Bookmap <abbreviated-form
+        keyref="othermeta"/> before topic <abbreviated-form
+        keyref="othermeta"/> has been included</dd>
+      </dlentry>
+
+      <dlentry>
+        <dt>book_maps_after_topics_included</dt>
+        <dd>Bookmap <abbreviated-form keyref="othermeta"/> after topic <abbreviated-form keyref="othermeta"/> data has been included</dd>
+      </dlentry>
+    </dl>
+
+    <p>Probably the most useful report is
+      <filepath>duplicates</filepath> which shows which <abbreviated-form
+      keyref="othermeta"/> names would have duplicate definitions in each
+      bookmap if the <abbreviated-form keyref="othermeta"/> currently in each
+      topic was migrated to its calling bookmaps.  If these topics were
+      deduplicated then their <abbreviated-form keyref="othermeta"/> data could
+      be safely transferred from each topic to the calling bookmaps without
+      fear of contention.
+    </p>
+
+    <p>The purpose of each report is discussed in the following sections with
+    additional notes relating the report to the test scenario:</p>
+
+    <section>
+      <title>duplicates_separately</title> <p>This report lists the bookmaps or
+      topics that have duplicated <abbreviated-form keyref="othermeta"/> names
+      in them.  I.e. the same name is defined with different contents.
+      Obviously this confusion of purpose is undesirable. A first step then
+      would be to reduce this report to zero by resolving the duplication
+      of <abbreviated-form keyref="othermeta"/> names in any items listed in
+      it.</p>
+
+      <note>In the test scenario no bookmaps or topics have duplicated
+      <abbreviated-form keyref="othermeta"/> names and so this report is not present.</note>
+    </section>
+
+    <section>
+      <title>duplicates</title>
+
+      <p>This report lists the bookmaps that have bookmaps that call topics
+      that require different values for a given <abbreviated-form
+      keyref="othermeta"/> name.  We wish to reduce this report to zero.</p>
+
+      <note>In the test scenario the <b>dd</b> and <b>ee</b> <abbreviated-form
+      keyref="othermeta"/> are problematic because they either disagree with
+      what is already in the bookmaps or with items that will be pushed into
+      the bookmaps by other topics called from the bookmaps.</note>
+    </section>
+
+    <section>
+      <title>must_remain_in_topic</title>
+
+      <p>This report lists <abbreviated-form keyref="othermeta"/> that
+      currently must remain in their topics because, currently, moving the
+      indicated <abbreviated-form keyref="othermeta"/> to the calling bookmap
+      would cause <abbreviated-form keyref="othermeta"/> name duplication in
+      that bookmap. Consequently we wish to reduce this report to zero.</p>
+
+      <note>In the test scenario the <b>dd</b> and <b>ee</b> <abbreviated-form
+      keyref="othermeta"/> must currently remain in their respective topics
+      because of the disagreements noted in the previous section.</note>
+
+    </section>
+
+    <section>
+      <title>push_to_book_maps</title> <p>This report lists the
+      <abbreviated-form keyref="othermeta"/> that can currently be safely moved
+      to their calling bookmaps with causing duplication.  We wish to maximize
+      this report!</p>
+
+      <note>In the test scenario the <b>aa</b>, <b>bb</b> and <b>cc</b>
+      <abbreviated-form keyref="othermeta"/> can be safely migrated to the
+      their calling bookmaps as there are no clashes withe either the
+      <abbreviated-form keyref="othermeta"/> currently in each bookmap or with
+      the requirements of the other topics called from each bookmap.</note>
+
+    </section>
+
+    <section>
+      <title>book_maps_before_topics_included</title> <p>This report lists the
+      status quo apriori - the <abbreviated-form keyref="othermeta"/> items in
+      each file before any deduplication.  The report:
+      <filepath>duplicates_separately</filepath>
+       is a reduction of this report which shows only the duplicated items.
+       </p>
+
+      <note>In the test scenario the <b>aa</b>, <b>bb</b> and <b>ee</b>
+      <abbreviated-form keyref="othermeta"/> are already included in one or
+      other of the bookmaps. </note>
+    </section>
+
+    <section>
+      <title>book_maps_after_topics_included</title>
+      <p>
+        This report lists the outcome of moving all the <abbreviated-form
+        keyref="othermeta"/> items to their calling bookmaps regardless of any
+        duplication.  The report <filepath>duplicates</filepath> is a reduction
+        of this report to show only the duplicated <abbreviated-form
+        keyref="othermeta"/> items.
+
+        <note>In the test scenario all of the <abbreviated-form
+        keyref="othermeta"/> are visible in the report with the <b>dd</b>,
+        <b>ee</b> <abbreviated-form keyref="othermeta"/> duplicated. </note>
+      </p>
+    </section>
+  </conbody>
+</concept>
