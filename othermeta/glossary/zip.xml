@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossentry.dtd" []>
+<glossentry id="awsAmi">
+  <glossterm>Zip compressed file</glossterm>
+  <glossBody>
+    <glossAlt>
+      <glossAcronym>zip file</glossAcronym>
+    </glossAlt>
+  </glossBody>
+</glossentry>

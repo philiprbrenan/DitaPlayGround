@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossentry.dtd" []>
+<glossentry id="othermeta">
+  <glossterm>othermeta tags</glossterm>
+  <glossBody>
+    <glossAlt>
+      <glossAcronym>othermeta</glossAcronym>
+    </glossAlt>
+  </glossBody>
+</glossentry>
